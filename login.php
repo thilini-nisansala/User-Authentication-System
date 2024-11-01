@@ -68,8 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-session_start();
+/*session_start();
 $_SESSION['username'] = $username;  // Store the username in the session
 header("Location: dashboard.php");  // Redirect to a dashboard page
-
+*/
 ?>
