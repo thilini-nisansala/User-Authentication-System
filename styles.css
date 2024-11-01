@@ -53,3 +53,23 @@ label {
     display: block;
     margin-bottom: 5px;
 }
+
+
+/* Navigation bar styling */
+nav {
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

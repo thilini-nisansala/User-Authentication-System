@@ -13,6 +13,12 @@
         <input type="password" name="password" required><br>
         <button type="submit">Register</button>
     </form>
+
+    <nav>
+    <a href="register.php">Register</a>
+    <a href="login.php">Login</a>
+</nav>
+
 </body>
 </html>
 
