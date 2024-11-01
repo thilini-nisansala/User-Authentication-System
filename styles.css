@@ -1,4 +1,11 @@
-/* Basic styling for body and form */
+/* Reset styles for a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling to center the form vertically and horizontally */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -6,10 +13,34 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    flex-direction: column;
 }
 
-/* Styling the form container */
+/* Navigation bar styling */
+nav {
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Form container styling */
 form {
     background-color: #ffffff;
     padding: 20px;
@@ -17,6 +48,7 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin-top: 100px;  /* Push the form down below the fixed navigation bar */
 }
 
 /* Form inputs */
@@ -54,26 +86,6 @@ label {
     margin-bottom: 5px;
 }
 
-
-/* Navigation bar styling */
-nav {
-    background-color: #007bff;
-    padding: 10px 20px;
-    color: white;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
 /* Popup message styling */
 .popup {
     visibility: hidden;
@@ -83,7 +95,7 @@ nav a:hover {
     text-align: center;
     padding: 10px;
     position: fixed;
-    top: 20px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
@@ -97,12 +109,11 @@ nav a:hover {
 }
 
 @keyframes fadein {
-    from {top: 0; opacity: 0;}
-    to {top: 20px; opacity: 1;}
+    from {top: 50px; opacity: 0;}
+    to {top: 70px; opacity: 1;}
 }
 
 @keyframes fadeout {
-    from {top: 20px; opacity: 1;}
-    to {top: 0; opacity: 0;}
+    from {top: 70px; opacity: 1;}
+    to {top: 50px; opacity: 0;}
 }
-

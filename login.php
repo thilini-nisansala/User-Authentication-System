@@ -41,6 +41,7 @@ function showPopup(message) {
 
 
 <?php
+
 session_start();
 $conn = new mysqli('localhost', 'root', '', 'user_system');
 
@@ -64,7 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "User not found.";
     }
 }
-?>
 
 
 
@@ -72,3 +72,4 @@ session_start();
 $_SESSION['username'] = $username;  // Store the username in the session
 header("Location: dashboard.php");  // Redirect to a dashboard page
 
+?>
