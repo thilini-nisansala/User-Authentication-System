@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 <body>
     <form action="register.php" method="POST">
