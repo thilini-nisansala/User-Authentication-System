@@ -4,6 +4,20 @@
     <title>Register</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 
+    <script>
+function showPopup(message) {
+    var popup = document.getElementById("popupMessage");
+    popup.innerText = message;
+    popup.classList.add("show");
+
+    // Remove the popup after 3 seconds
+    setTimeout(function() {
+        popup.classList.remove("show");
+    }, 3000);
+}
+</script>
+
+
 </head>
 <body>
     <form action="register.php" method="POST">
@@ -13,6 +27,9 @@
         <input type="password" name="password" required><br>
         <button type="submit">Register</button>
     </form>
+
+    <div id="popupMessage" class="popup"></div>
+
 
     <nav>
     <a href="register.php">Register</a>
@@ -34,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insert user into the database
     $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
     if ($conn->query($sql) === TRUE) {
-        echo "Registration successful!";
+        echo "<script>showPopup('Registration successful!');</script>";
     } else {
         echo "Error: " . $conn->error;
     }
